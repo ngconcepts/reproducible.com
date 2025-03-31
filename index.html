@@ -3,539 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducible.com - Premium Domain for AI/ML Reproducibility | For Sale</title>
-    <meta name="description" content="Reproducible.com - Premium domain name for sale. Position your company at the forefront of AI/ML reproducibility in a market facing a critical need.">
+    <meta name="description" content="Reproducible.com - Premium domain name for sale. Lead the AI/ML reproducibility revolution in a market demanding trust and reliability.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="AI, ML, reproducibility, premium domain, MLOps, AI governance, for sale">
+    <title>Reproducible.com - Premium Domain for AI/ML Excellence | For Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0284c7; /* More vibrant blue */
+            --primary: #0284c7;
             --primary-dark: #0369a1;
             --secondary: #0f172a;
             --light: #f8fafc;
-            --accent: #10b981; /* More vibrant green */
+            --accent: #10b981;
             --gray: #64748b;
             --gray-light: #e2e8f0;
             --gradient-start: #0284c7;
             --gradient-end: #0ea5e9;
+            --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
-        
+
         body {
             background-color: var(--light);
             color: var(--secondary);
             line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
-        
+
         .container {
-            max-width: 1200px;
+            max-width: 1240px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
-        
+
         header {
-            background-color: var(--secondary);
+            background: var(--secondary);
             color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
+            padding: 1.25rem 0;
+            position: sticky;
             top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
         }
-        
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             font-weight: 800;
+            letter-spacing: -0.5px;
         }
-        
+
         .logo span {
             color: var(--accent);
         }
-        
+
         .nav-links {
             display: flex;
+            align-items: center;
+            gap: 2rem;
         }
-        
+
         .nav-links a {
             color: white;
             text-decoration: none;
-            margin-left: 30px;
-            font-weight: 500;
-            transition: color 0.3s;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
         }
-        
+
         .nav-links a:hover {
             color: var(--accent);
         }
-        
+
         .hero {
-            min-height: 100vh;
+            min-height: calc(100vh - 70px);
             display: flex;
             align-items: center;
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('/api/placeholder/1920/1080') center/cover no-repeat;
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.95)), url('/api/placeholder/1920/1080') center/cover no-repeat;
             color: white;
             text-align: center;
             padding-top: 70px;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle, rgba(2, 132, 199, 0.1) 0%, transparent 70%);
+            animation: pulse-bg 10s infinite;
+        }
+
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 0.8; }
+        }
+
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
         }
-        
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
             font-weight: 800;
+            line-height: 1.2;
         }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--gray-light);
-        }
-        
+
         .domain-name {
-            font-size: 4.5rem;
-            background: linear-gradient(to right, var(--accent), #06b6d4);
+            font-size: clamp(3rem, 6vw, 5rem);
+            background: linear-gradient(90deg, var(--accent), #06b6d4);
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             background-clip: text;
+            color: transparent;
             font-weight: 900;
-            letter-spacing: -1px;
+            letter-spacing: -1.5px;
             margin: 1.5rem 0;
         }
-        
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            color: var(--gray-light);
+        }
+
         .btn {
-            display: inline-block;
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
             color: white;
-            padding: 15px 35px;
+            padding: 14px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s;
-            margin: 10px;
+            font-size: 1.1rem;
+            transition: var(--transition);
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+            box-shadow: var(--shadow-sm);
         }
-        
+
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(2, 132, 199, 0.4);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
-        
+
         .btn-outline {
             background: transparent;
             border: 2px solid var(--primary);
             box-shadow: none;
         }
-        
+
         .btn-outline:hover {
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
             border-color: transparent;
         }
-        
+
         section {
-            padding: 100px 0;
+            padding: 6rem 0;
         }
-        
+
         h2 {
-            font-size: 2.8rem;
-            margin-bottom: 2rem;
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2.5rem;
             text-align: center;
             color: var(--secondary);
             font-weight: 800;
         }
-        
-        h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-            font-weight: 700;
-        }
-        
+
         .section-intro {
             text-align: center;
             max-width: 800px;
-            margin: 0 auto 4rem;
-            font-size: 1.1rem;
-        }
-        
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .card {
-            background-color: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid var(--gray-light);
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-        
-        .card-body {
-            padding: 30px;
-        }
-        
-        .card-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 25px;
-            color: white;
-            font-size: 1.8rem;
-        }
-        
-        .stats {
-            background: linear-gradient(to right, var(--secondary), #1e293b);
-            color: white;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--accent), #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-            line-height: 1;
-        }
-        
-        .testimonials {
-            background-color: var(--gray-light);
-        }
-        
-        .testimonial {
-            text-align: center;
-            padding: 40px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            position: relative;
-        }
-        
-        .testimonial-text:before,
-        .testimonial-text:after {
-            content: '"';
-            font-size: 3rem;
-            color: var(--accent);
-            position: absolute;
-            opacity: 0.3;
-        }
-        
-        .testimonial-text:before {
-            top: -20px;
-            left: -15px;
-        }
-        
-        .testimonial-text:after {
-            bottom: -40px;
-            right: -15px;
-        }
-        
-        .testimonial-author {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-        
-        .testimonial-company {
+            margin: 0 auto 3rem;
+            font-size: 1.15rem;
             color: var(--gray);
         }
-        
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border: 1px solid var(--gray-light);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+
+        .stats {
+            background: linear-gradient(135deg, var(--secondary), #1e293b);
+            color: white;
+            position: relative;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--accent), #06b6d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
         .cta {
             background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
             color: white;
             text-align: center;
             position: relative;
-            overflow: hidden;
         }
-        
-        .cta:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('/api/placeholder/200/200') center/400px repeat;
-            opacity: 0.05;
-        }
-        
+
         .contact-form {
-            max-width: 600px;
+            max-width: 640px;
             margin: 0 auto;
             background: white;
-            padding: 40px;
+            padding: 2.5rem;
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-            position: relative;
+            box-shadow: var(--shadow-md);
         }
-        
+
         .form-group {
-            margin-bottom: 25px;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--secondary);
-        }
-        
-        input, textarea, select {
-            width: 100%;
-            padding: 15px;
-            border: 1px solid var(--gray-light);
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        input:focus, textarea:focus, select:focus {
-            outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
-        }
-        
-        footer {
-            background-color: var(--secondary);
-            color: white;
-            padding: 60px 0 30px;
-            text-align: center;
-        }
-        
-        .social-links {
-            margin: 20px 0;
-        }
-        
-        .social-links a {
-            color: white;
-            margin: 0 15px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: var(--accent);
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .domain-name {
-                font-size: 3.2rem;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-
-            section {
-                padding: 70px 0;
-            }
-
-            h2 {
-                font-size: 2.2rem;
-            }
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            background: linear-gradient(to right, var(--accent), #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
             margin-bottom: 1.5rem;
         }
 
-        .benefit-list {
-            list-style-type: none;
-            margin-bottom: 2rem;
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--secondary);
         }
 
-        .benefit-list li {
-            margin-bottom: 1.2rem;
-            display: flex;
-            align-items: flex-start;
-            font-size: 1.05rem;
+        input, textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-light);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: var(--transition);
         }
 
-        .benefit-list li::before {
-            content: "✓";
-            color: var(--accent);
-            font-weight: bold;
-            margin-right: 15px;
-            display: inline-block;
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        footer {
+            background: var(--secondary);
+            color: white;
+            padding: 4rem 0 2rem;
+            text-align: center;
         }
 
         .domain-stats {
             display: flex;
-            justify-content: center;
-            align-items: stretch;
-            margin: 3rem 0;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 3rem 0;
         }
 
         .stat-block {
-            padding: 2.5rem;
-            text-align: center;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            flex: 1;
-            min-width: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            transition: transform 0.3s;
+            padding: 2rem;
+            min-width: 220px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: var(--transition);
         }
 
         .stat-block:hover {
             transform: translateY(-5px);
-        }
-
-        .stat-block:last-child {
-            border-right: none;
-        }
-
-        .stat-number-accent {
-            font-size: 3.5rem;
-            font-weight: 800;
-            background: linear-gradient(to right, var(--accent), #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 15px;
-            line-height: 1;
-        }
-
-        .pricing {
-            background-color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-            text-align: center;
-            margin: 3rem 0;
-            border: 1px solid var(--gray-light);
-        }
-
-        .price {
-            font-size: 4rem;
-            font-weight: 800;
-            color: var(--secondary);
-            margin: 1.5rem 0;
-            position: relative;
-            display: inline-block;
-        }
-
-        .inquire-box {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            color: white;
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            margin: 3rem 0;
-            box-shadow: 0 20px 40px rgba(2, 132, 199, 0.2);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .inquire-box:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('/api/placeholder/100/100') center/200px repeat;
-            opacity: 0.05;
-        }
-
-        .inquire-box h3 {
-            color: white;
-            font-size: 2rem;
-        }
-
-        .highlight-box {
-            border: 2px solid var(--accent);
-            border-radius: 15px;
-            padding: 2rem;
-            margin: 3rem 0;
-            position: relative;
-        }
-
-        .highlight-label {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background: var(--accent);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .marquee-container {
-            overflow: hidden;
-            position: relative;
-            padding: 20px 0;
             background: var(--secondary);
-            margin: 4rem 0;
+            padding: 1rem 0;
+            overflow: hidden;
         }
 
         .marquee {
             display: flex;
-            animation: marquee 30s linear infinite;
-            white-space: nowrap;
+            animation: marquee 25s linear infinite;
         }
 
         .marquee-item {
-            font-size: 1.2rem;
+            color: var(--gray-light);
+            padding: 0 2rem;
             font-weight: 600;
-            padding: 0 30px;
-            color: white;
+            font-size: 1.1rem;
         }
 
         @keyframes marquee {
@@ -543,124 +354,22 @@
             100% { transform: translateX(-50%); }
         }
 
-        .value-proposition {
-            display: flex;
-            align-items: center;
-            margin: 5rem 0;
-            flex-wrap: wrap;
-        }
-
-        .value-image {
-            flex: 1;
-            min-width: 300px;
-            padding: 2rem;
-        }
-
-        .value-content {
-            flex: 1;
-            min-width: 300px;
-            padding: 2rem;
-        }
-
-        .timer-container {
-            margin: 2rem 0;
-            text-align: center;
-        }
-
-        .timer {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 1rem;
-        }
-
-        .timer-unit {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            padding: 10px;
-            min-width: 80px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .timer-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--secondary);
-        }
-
-        .timer-label {
-            font-size: 0.8rem;
-            color: var(--gray);
-            text-transform: uppercase;
-        }
-
         .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            margin: 2rem 0;
+            gap: 0.75rem;
             justify-content: center;
+            margin-bottom: 2rem;
         }
 
         .tag {
-            background: rgba(2, 132, 199, 0.1);
-            color: var(--primary);
-            padding: 8px 15px;
-            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent);
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 0.9rem;
             font-weight: 600;
-        }
-
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin: 3rem 0;
-        }
-
-        .comparison-col {
-            padding: 2rem;
-            border-radius: 15px;
-        }
-
-        .comparison-col:first-child {
-            background-color: #fee2e2;
-            color: #b91c1c;
-        }
-
-        .comparison-col:last-child {
-            background-color: #dcfce7;
-            color: #15803d;
-        }
-
-        .comparison-title {
-            font-weight: 700;
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        .comparison-list {
-            list-style-type: none;
-        }
-
-        .comparison-list li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-        }
-
-        .comparison-list li::before {
-            content: "✗";
-            margin-right: 10px;
-            font-weight: bold;
-        }
-
-        .comparison-col:last-child .comparison-list li::before {
-            content: "✓";
+            backdrop-filter: blur(4px);
         }
 
         .pulsing-btn {
@@ -668,91 +377,38 @@
         }
 
         @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.4);
-            }
-            70% {
-                box-shadow: 0 0 0 20px rgba(2, 132, 199, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(2, 132, 199, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(2, 132, 199, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(2, 132, 199, 0); }
         }
 
-        /* Counter animation effect */
-        .counter-animation {
-            animation: countUp 2s ease-out forwards;
-            display: inline-block;
-        }
-
-        @keyframes countUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Consider adding a hamburger menu */
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .hero {
+                padding: 4rem 0;
+            }
+
+            .domain-stats {
+                flex-direction: column;
+            }
+
+            .stat-block {
+                min-width: 100%;
             }
         }
 
-        /* Ribbon styling */
-        .ribbon {
-            position: absolute;
-            top: 0;
-            right: 0;
-            background: var(--accent);
-            color: white;
-            padding: 10px 30px;
-            transform: rotate(45deg) translateX(50px) translateY(-20px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            font-weight: 600;
+        /* Accessibility */
+        a:focus, button:focus {
+            outline: 3px solid var(--accent);
+            outline-offset: 2px;
         }
 
-        /* FAQ styling */
-        .faq-container {
-            max-width: 800px;
-            margin: 4rem auto;
-        }
-
-        .faq-item {
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--gray-light);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.5rem;
-            background-color: white;
-            font-weight: 600;
-            cursor: pointer;
-            position: relative;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-answer {
-            padding: 0 1.5rem;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s, padding 0.3s;
-            background-color: #f8fafc;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 1.5rem;
-            max-height: 500px;
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(45deg);
+        /* Performance optimization */
+        img {
+            loading: lazy;
         }
     </style>
 </head>
@@ -775,132 +431,95 @@
         <div class="container">
             <div class="hero-content">
                 <div class="tags">
-                    <div class="tag">Premium Domain</div>
-                    <div class="tag">AI/ML Industry</div>
-                    <div class="tag">High Growth Market</div>
-                    <div class="tag">Rare Opportunity</div>
+                    <span class="tag">Premium Domain</span>
+                    <span class="tag">AI/ML Focus</span>
+                    <span class="tag">High Growth</span>
+                    <span class="tag">Unique Asset</span>
                 </div>
-                <h1>Secure the Domain Defining the Future of Trusted AI</h1>
+                <h1>Lead the Future of Trusted AI/ML</h1>
                 <div class="domain-name">Reproducible.com</div>
-                <p>A strategic acquisition at the intersection of ML/AI excellence, scientific integrity, and enterprise trust — in a market facing an urgent reproducibility crisis.</p>
-                
-
-                
-                <a href="#contact" class="btn pulsing-btn">Inquire About Acquisition</a>
-                <a href="#value" class="btn btn-outline">Discover the Value</a>
+                <p>Secure a premium domain at the heart of AI/ML innovation, addressing the urgent need for reproducibility in a rapidly evolving $15.7T market.</p>
+                <div>
+                    <a href="#contact" class="btn pulsing-btn">Inquire Now</a>
+                    <a href="#value" class="btn btn-outline">Explore Value</a>
+                </div>
             </div>
         </div>
     </section>
 
     <div class="marquee-container">
         <div class="marquee">
-            <div class="marquee-item">AI REPRODUCIBILITY CRISIS</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">MACHINE LEARNING TRUST GAP</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">SCIENTIFIC INTEGRITY</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">ENTERPRISE AI ADOPTION</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">MLOPS REVOLUTION</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">AI GOVERNANCE</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">AI REPRODUCIBILITY CRISIS</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">MACHINE LEARNING TRUST GAP</div>
-            <div class="marquee-item">•</div>
-            <div class="marquee-item">SCIENTIFIC INTEGRITY</div>
-            <div class="marquee-item">•</div>
+            <span class="marquee-item">AI Reproducibility Crisis</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Trust in Machine Learning</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Scientific Integrity</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Enterprise AI Growth</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">MLOps Innovation</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">AI Governance</span>
+            <span class="marquee-item">•</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="marquee-item">AI Reproducibility Crisis</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Trust in Machine Learning</span>
+            <span class="marquee-item">•</span>
+            <span class="marquee-item">Scientific Integrity</span>
+            <span class="marquee-item">•</span>
         </div>
     </div>
 
     <section id="value">
         <div class="container">
-            <h2>Own the Solution to a $15.7 Trillion Problem</h2>
+            <h2>Solve a $15.7T Challenge</h2>
             <div class="section-intro">
-                <p>As AI transforms every industry, reproducibility has emerged as the critical challenge limiting adoption, accuracy, and trust. The owner of Reproducible.com positions themselves at the forefront of this urgent market need.</p>
+                <p>Reproducibility is the cornerstone of AI trust and adoption. Owning Reproducible.com positions you as the leader in tackling this critical industry challenge.</p>
             </div>
-            
             <div class="domain-stats">
                 <div class="stat-block">
-                    <div class="stat-number-accent counter-animation">5%</div>
-                    <p>of AI researchers share source code in publications</p>
+                    <div class="stat-number">5%</div>
+                    <p>AI researchers sharing source code</p>
                 </div>
                 <div class="stat-block">
-                    <div class="stat-number-accent counter-animation">30%</div>
-                    <p>of AI research is reproducible</p>
+                    <div class="stat-number">30%</div>
+                    <p>AI research reproducible</p>
                 </div>
                 <div class="stat-block">
-                    <div class="stat-number-accent counter-animation">$15.7T</div>
-                    <p>projected AI market contribution by 2030</p>
+                    <div class="stat-number">$15.7T</div>
+                    <p>AI market by 2030</p>
                 </div>
                 <div class="stat-block">
-                    <div class="stat-number-accent counter-animation">$4B+</div>
-                    <p>MLOps market size by 2025</p>
+                    <div class="stat-number">$4B+</div>
+                    <p>MLOps market by 2025</p>
                 </div>
-            </div>
-            
-            <div class="comparison">
-                <div class="comparison-col">
-                    <div class="comparison-title">Without Reproducibility</div>
-                    <ul class="comparison-list">
-                        <li>Research findings cannot be verified</li>
-                        <li>AI models deliver inconsistent results</li>
-                        <li>Enterprise AI adoption slows dramatically</li>
-                        <li>Public trust in AI erodes</li>
-                        <li>Regulatory risk increases</li>
-                        <li>ML investment yields poor returns</li>
-                    </ul>
-                </div>
-                <div class="comparison-col">
-                    <div class="comparison-title">With Reproducibility</div>
-                    <ul class="comparison-list">
-                        <li>Research findings build trust</li>
-                        <li>AI models deliver consistent, reliable results</li>
-                        <li>Enterprise AI adoption accelerates</li>
-                        <li>Public confidence in AI strengthens</li>
-                        <li>Regulatory compliance improves</li>
-                        <li>ML investment delivers maximum ROI</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="highlight-box">
-                <div class="highlight-label">MARKET INSIGHT</div>
-                <h3>Reproducibility: The Key to AI Trust</h3>
-                <p>As AI systems become increasingly integrated into critical infrastructure, healthcare, finance, and scientific research, the ability to reproduce results is no longer optional — it's essential. The domain reproducible.com represents the cornerstone principle that will determine which AI companies and research organizations succeed in the coming decade.</p>
             </div>
         </div>
     </section>
 
     <section id="market" class="stats">
         <div class="container">
-            <h2>Positioned at the Center of Multiple High-Growth Markets</h2>
+            <h2>Tap Into Explosive Markets</h2>
             <div class="section-intro">
-                <p>Reproducible.com sits at the intersection of several explosive growth markets, making it uniquely valuable to multiple buyer categories.</p>
+                <p>Reproducible.com aligns with multiple high-growth sectors, making it a strategic asset for visionary organizations.</p>
             </div>
-            
             <div class="grid">
-                <div class="stat-item">
-                    <div class="feature-icon">🔬</div>
-                    <h3>Research Revolution</h3>
-                    <p>Scientific organizations establishing reproducibility standards for the ML research that will define our future</p>
+                <div class="card stat-item">
+                    <h3>Research Standards</h3>
+                    <p>Lead the charge in setting ML reproducibility benchmarks</p>
                 </div>
-                <div class="stat-item">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>MLOps Explosion</h3>
-                    <p>Platforms tracking code, data, and computational environments in a market projected to reach $4B+ by 2025</p>
+                <div class="card stat-item">
+                    <h3>MLOps Growth</h3>
+                    <p>Capitalize on a $4B+ market for reliable AI deployment</p>
                 </div>
-                <div class="stat-item">
-                    <div class="feature-icon">💼</div>
-                    <h3>Enterprise AI Trust</h3>
-                    <p>Companies building reliable, transparent AI systems that scale confidently across regulated industries</p>
+                <div class="card stat-item">
+                    <h3>Enterprise Trust</h3>
+                    <p>Build scalable, transparent AI for regulated industries</p>
                 </div>
-                <div class="stat-item">
-                    <div class="feature-icon">🛡️</div>
+                <div class="card stat-item">
                     <h3>AI Governance</h3>
-                    <p>Organizations establishing frameworks to ensure AI systems are auditable, reliable and compliant</p>
+                    <p>Ensure auditable, compliant AI frameworks</p>
                 </div>
             </div>
         </div>
@@ -908,95 +527,19 @@
 
     <section id="benefits">
         <div class="container">
-            <h2>Strategic Acquisition Value</h2>
+            <h2>Strategic Advantages</h2>
             <div class="grid">
                 <div class="card">
-                    <div class="card-body">
-                        <h3>Industry Authority</h3>
-                        <ul class="benefit-list">
-                            <li>Instant credibility in the reproducibility space</li>
-                            <li>Position as a leader addressing a critical industry challenge</li>
-                            <li>Direct connection to a fundamental scientific principle</li>
-                            <li>Differentiation in a crowded AI/ML marketplace</li>
-                        </ul>
-                    </div>
+                    <h3>Authority</h3>
+                    <p>Gain instant credibility and leadership in AI reproducibility</p>
                 </div>
                 <div class="card">
-                    <div class="card-body">
-                        <h3>Market Opportunity</h3>
-                        <ul class="benefit-list">
-                            <li>Fast-growing MLOps market expected to reach $4B+ by 2025</li>
-                            <li>Increasing regulatory focus on AI transparency</li>
-                            <li>Significant venture capital flowing into AI infrastructure</li>
-                            <li>Essential for AI deployment in regulated industries like healthcare and finance</li>
-                        </ul>
-                    </div>
+                    <h3>Opportunity</h3>
+                    <p>Leverage growing demand in MLOps and AI compliance</p>
                 </div>
                 <div class="card">
-                    <div class="card-body">
-                        <h3>Technical Value</h3>
-                        <ul class="benefit-list">
-                            <li>Short, memorable, and descriptive domain name</li>
-                            <li>Directly relates to a critical aspect of AI/ML development</li>
-                            <li>Easy to spell and pronounce</li>
-                            <li>Suitable for global audience with no language barriers</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="pricing">
-                <h3>Premium Domain Investment</h3>
-                <p>Reproducible.com represents a strategic acquisition in the rapidly growing fields of AI/ML, MLOps, and scientific computing where reproducibility is the cornerstone of trust.</p>
-                <div class="inquire-box">
-                    <div class="ribbon">Exclusive Opportunity</div>
-                    <h3>Premium Domain Acquisition</h3>
-                    <p>Similar technical/scientific domains with strong industry relevance have sold for significant sums, with strategic domains in AI/ML often reaching six figures.</p>
-                    <a href="#contact" class="btn">Request Acquisition Details</a>
-                </div>
-            </div>
-            
-            <div class="faq-container">
-                <h3 style="text-align: center; margin-bottom: 2rem;">Frequently Asked Questions</h3>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Why is reproducibility so important in AI/ML?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Reproducibility is the foundation of scientific trust. In AI and ML, it ensures models perform consistently across different implementations and environments. Without reproducibility, AI systems cannot be properly validated, audited, or trusted - limiting their adoption in critical applications and regulated industries.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What types of companies would benefit from owning this domain?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>This domain is ideal for: MLOps platforms focusing on deployment and monitoring, AI governance and compliance solutions, research institutions establishing reproducibility standards, AI infrastructure companies, and enterprise AI providers needing to build trust with customers in regulated industries.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What makes reproducible.com more valuable than alternative domains?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Reproducible.com directly addresses the most critical challenge in AI adoption today. It's short, descriptive, and instantly communicates a commitment to scientific rigor and trustworthy AI. Unlike generic AI domains, it positions the owner at the forefront of solving a specific, high-value problem that affects the entire industry.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What is the process for acquiring this domain?
-                        <span class="faq-toggle">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Submit your inquiry through the contact form below. We'll provide detailed information on pricing and the secure transfer process. The domain will be transferred through a reputable escrow service to ensure a safe transaction for both parties.</p>
-                    </div>
+                    <h3>Memorability</h3>
+                    <p>Secure a concise, impactful domain with global appeal</p>
                 </div>
             </div>
         </div>
@@ -1004,56 +547,41 @@
 
     <section id="contact" class="cta">
         <div class="container">
-            <h2>Secure This Strategic Asset</h2>
+            <h2>Acquire Reproducible.com</h2>
             <div class="section-intro">
-                <p>Position your organization at the forefront of AI/ML reproducibility. Complete the form below to receive acquisition information.</p>
+                <p>Take the lead in AI/ML innovation. Submit your inquiry for acquisition details.</p>
             </div>
-            
             <div class="contact-form">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" placeholder="Your name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Business Email</label>
-                    <input type="email" id="email" placeholder="Your email">
-                </div>
-                <div class="form-group">
-                    <label for="company">Company</label>
-                    <input type="text" id="company" placeholder="Your company">
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Additional Information</label>
-                    <textarea id="message" rows="5" placeholder="Tell us about your interest in reproducible.com and your organization's work in AI/ML"></textarea>
-                </div>
-                <button class="btn pulsing-btn">Submit Inquiry</button>
-                <p style="margin-top: 20px; font-size: 0.9rem; color: var(--light); text-align: left;">Your information is kept confidential. We'll respond within 24 hours.</p>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Business Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company" placeholder="Your company">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your interest in reproducible.com" required></textarea>
+                    </div>
+                    <button type="submit" class="btn pulsing-btn">Submit Inquiry</button>
+                </form>
+                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">Confidential inquiry. Response within 24 hours.</p>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <div class="logo" style="margin-bottom: 20px;">Reproducible<span>.com</span></div>
-            <p>A premium domain name at the intersection of scientific integrity, machine learning excellence, and enterprise AI deployment.</p>
-            <p style="margin-top: 40px;">&copy; 2025 Reproducible.com - All Rights Reserved</p>
+            <div class="logo">Reproducible<span>.com</span></div>
+            <p style="margin: 1rem 0;">A premium domain for AI/ML excellence and trust.</p>
+            <p>© 2025 Reproducible.com - All Rights Reserved</p>
         </div>
     </footer>
-
-    <!-- Simple JavaScript for FAQ toggle -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                
-                question.addEventListener('click', function() {
-                    item.classList.toggle('active');
-                });
-            });
-        });
-    </script>
 </body>
 </html>
