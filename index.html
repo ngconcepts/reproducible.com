@@ -562,7 +562,7 @@
                 <p>Take the lead in AI/ML innovation. Submit your inquiry for acquisition details.</p>
             </div>
             <div class="contact-form">
-                <form action="#" method="POST">
+                <form id="myForm">
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
@@ -585,6 +585,38 @@
         </div>
     </section>
 
+    <script>
+        const form = document.getElementById("myForm");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            const formData = new FormData(form);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            data.domain = "reproducible.com";
+    
+            const scriptURL = "YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL";
+    
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", scriptURL);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //  Ensure correct content type
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert("Thank you for your inquiry! We will get back to you shortly."); // Improved user feedback
+                    form.reset(); // Clear the form fields
+                } else {
+                    alert("Sorry, there was an error submitting your inquiry. Please try again."); // More user-friendly error
+                    console.error("Error submitting form:", xhr.responseText); // Log the error for debugging
+                }
+            };
+            const urlEncodedData = new URLSearchParams(data).toString();
+            xhr.send(urlEncodedData);
+        });
+    </script>
+    
     <footer>
         <div class="container">
             <div class="logo">Reproducible<span>.com</span></div>
