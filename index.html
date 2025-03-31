@@ -100,6 +100,15 @@
             color: var(--accent);
         }
 
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
         .hero {
             min-height: calc(100vh - 70px);
             display: flex;
@@ -116,7 +125,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle, rgba(2, 132, 199, 0.1) 0%, transparent 70%);
+            background: radial-gradient(circle眾, rgba(2, 132, 199, 0.1) 0%, transparent 70%);
             animation: pulse-bg 10s infinite;
         }
 
@@ -195,6 +204,13 @@
             border-color: transparent;
         }
 
+        .hero-content > div {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         section {
             padding: 6rem 0;
         }
@@ -208,7 +224,7 @@
         }
 
         .stats h2 {
-            color: white; /* Explicitly set to white for visibility */
+            color: white;
         }
 
         .section-intro {
@@ -280,7 +296,7 @@
         }
 
         .cta {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            background: linear-gradient(135deg, var(--secondary), var(--primary-dark));
             color: white;
             text-align: center;
             position: relative;
@@ -293,7 +309,7 @@
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: var(--shadow-md);
-            text-align: left; /* Left-align form text */
+            text-align: left;
         }
 
         .form-group {
@@ -325,10 +341,6 @@
         textarea {
             resize: vertical;
             min-height: 120px;
-        }
-
-        .contact-form p {
-            text-align: left; /* Explicitly left-align the note */
         }
 
         footer {
@@ -411,30 +423,38 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none; /* Consider adding a hamburger menu */
+            .hamburger {
+                display: block;
             }
-
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: var(--secondary);
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .nav-links.active {
+                display: flex;
+            }
             .hero {
                 padding: 4rem 0;
             }
-
             .domain-stats {
                 flex-direction: column;
             }
-
             .stat-block {
                 min-width: 100%;
             }
         }
 
-        /* Accessibility */
         a:focus, button:focus {
             outline: 3px solid var(--accent);
             outline-offset: 2px;
         }
 
-        /* Performance optimization */
         img {
             loading: lazy;
         }
@@ -445,6 +465,7 @@
         <div class="container">
             <nav>
                 <div class="logo">Reproducible<span>.com</span></div>
+                <button class="hamburger" aria-label="Toggle menu">☰</button>
                 <div class="nav-links">
                     <a href="#value">Value</a>
                     <a href="#market">Market</a>
@@ -598,7 +619,6 @@
                     </div>
                     <button type="submit" class="btn pulsing-btn">Submit Inquiry</button>
                 </form>
-                <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">Confidential inquiry. Response within 24 hours.</p>
             </div>
         </div>
     </section>
@@ -610,5 +630,11 @@
             <p>© 2025 Reproducible.com - All Rights Reserved</p>
         </div>
     </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
