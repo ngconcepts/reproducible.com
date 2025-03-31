@@ -3,62 +3,540 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reproducible.com - Premium Domain for Sale</title>
-    <meta name="description" content="Reproducible.com is a premium domain ideal for AI, ML, Data Science, and Research industries. Available now for purchase!">
+    <title>Reproducible.com - Premium Domain for AI/ML Reproducibility</title>
     <style>
-        body {font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333;}
-        .header {padding: 60px 20px; text-align: center; background-color: #0057e7; color: white;}
-        .header h1 {font-size: 48px; margin-bottom: 10px;}
-        .header p {font-size: 20px;}
-        .container {padding: 40px 20px; max-width: 900px; margin: auto;}
-        .highlight {background-color: #fff; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);}
-        .cta {text-align: center; margin-top: 30px;}
-        .cta button {background-color: #0057e7; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 6px; cursor: pointer;}
-        .cta button:hover {background-color: #0041c4;}
-        footer {text-align: center; padding: 20px; color: #888; font-size: 14px;}
-        a {color: #0057e7; text-decoration: none;}
-        a:hover {text-decoration: underline;}
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #0f172a;
+            --light: #f8fafc;
+            --accent: #22c55e;
+            --gray: #64748b;
+            --gray-light: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--secondary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('/api/placeholder/1920/1080') center/cover no-repeat;
+            color: white;
+            text-align: center;
+            padding-top: 70px;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: var(--gray-light);
+        }
+        
+        .domain-name {
+            font-size: 4rem;
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin: 1rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s;
+            margin: 10px;
+        }
+        
+        .btn:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--secondary);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .stats {
+            background-color: var(--secondary);
+            color: white;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+        
+        .testimonials {
+            background-color: var(--gray-light);
+        }
+        
+        .testimonial {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        .testimonial-company {
+            color: var(--gray);
+        }
+        
+        .cta {
+            background: linear-gradient(to right, var(--primary), var(--primary-dark));
+            color: white;
+            text-align: center;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--gray-light);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .domain-name {
+                font-size: 3rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-list {
+            list-style-type: none;
+            margin-bottom: 2rem;
+        }
+
+        .benefit-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .benefit-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .domain-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 3rem 0;
+        }
+
+        .stat-block {
+            padding: 2rem;
+            text-align: center;
+            border-right: 1px solid var(--gray-light);
+            flex: 1;
+        }
+
+        .stat-block:last-child {
+            border-right: none;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin: 1rem 0;
+        }
+
+        .inquire-box {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Reproducible<span>.com</span></div>
+                <div class="nav-links">
+                    <a href="#value">Value</a>
+                    <a href="#market">Market</a>
+                    <a href="#benefits">Benefits</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-<div class="header">
-    <h1>Reproducible.com</h1>
-    <p>Own a powerful, memorable domain at the heart of AI, Data Science, and Machine Learning.</p>
-</div>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Own the Future of AI/ML Reproducibility</h1>
+                <div class="domain-name">Reproducible.com</div>
+                <p>A premium domain at the intersection of scientific integrity, machine learning excellence, and enterprise AI deployment.</p>
+                <a href="#contact" class="btn">Inquire Now</a>
+                <a href="#value" class="btn btn-outline">Discover Value</a>
+            </div>
+        </div>
+    </section>
 
-<div class="container">
-    <div class="highlight">
-        <h2>Why Reproducible.com?</h2>
-        <ul>
-            <li><strong>Highly relevant:</strong> Essential keyword in Data Science, AI, ML, and research.</li>
-            <li><strong>SEO-friendly:</strong> Strong potential to rank high organically.</li>
-            <li><strong>Brandable:</strong> Short, clear, memorable name.</li>
-            <li><strong>Versatile:</strong> Ideal for MLOps platforms, data science tools, and research services.</li>
-        </ul>
-    </div>
+    <section id="value">
+        <div class="container">
+            <h2>A Domain Name Aligned with a Growing Crisis</h2>
+            <div class="section-intro">
+                <p>Reproducibility is facing a critical moment in AI/ML research and applications. Studies show less than one-third of AI research is verifiable and only about 5% of researchers share their source code. The owner of Reproducible.com positions themselves at the forefront of solving this crisis.</p>
+            </div>
+            
+            <div class="domain-stats">
+                <div class="stat-block">
+                    <div class="stat-number">5%</div>
+                    <p>of AI researchers share source code in publications</p>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-number">~30%</div>
+                    <p>of AI research is reproducible</p>
+                </div>
+                <div class="stat-block">
+                    <div class="stat-number">$15.7T</div>
+                    <p>projected AI market contribution to global economy by 2030</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="highlight">
-        <h2>Industries and Uses:</h2>
-        <p>Perfect for businesses or startups involved in:</p>
-        <ul>
-            <li>Machine Learning & AI platforms</li>
-            <li>Data Science collaboration tools</li>
-            <li>Scientific research and publishing</li>
-            <li>MLOps services</li>
-        </ul>
-    </div>
+    <section id="market" class="stats">
+        <div class="container">
+            <h2>Premium Market Position</h2>
+            <div class="section-intro">
+                <p>Reproducible.com represents a fundamental scientific principle that's becoming critical in one of technology's fastest-growing sectors.</p>
+            </div>
+            
+            <div class="grid">
+                <div class="stat-item">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Research Institutions</h3>
+                    <p>Establishing reproducibility standards for machine learning in scientific research</p>
+                </div>
+                <div class="stat-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h3>MLOps Platforms</h3>
+                    <p>Building tools for tracking code, data, and computational environments</p>
+                </div>
+                <div class="stat-item">
+                    <div class="feature-icon">💼</div>
+                    <h3>Enterprise AI</h3>
+                    <p>Creating reliable, error-reduced AI systems that scale confidently</p>
+                </div>
+                <div class="stat-item">
+                    <div class="feature-icon">🎓</div>
+                    <h3>Academic Initiatives</h3>
+                    <p>Addressing the reproducibility crisis in ML-based science</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="cta">
-        <button onclick="location.href='mailto:your-email@example.com?subject=Interested in Reproducible.com';">
-            Inquire Now
-        </button>
-    </div>
-</div>
+    <section id="benefits">
+        <div class="container">
+            <h2>Strategic Acquisition Benefits</h2>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Brand Authority</h3>
+                        <ul class="benefit-list">
+                            <li>Instant credibility in reproducibility space</li>
+                            <li>Memorable, meaningful domain name</li>
+                            <li>Clear connection to a fundamental scientific principle</li>
+                            <li>Positions your organization as leading the solution to a critical problem</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Market Opportunity</h3>
+                        <ul class="benefit-list">
+                            <li>Growing MLOps market expected to reach $4B by 2025</li>
+                            <li>Increasing regulatory focus on AI transparency and reproducibility</li>
+                            <li>Significant venture capital flowing into AI infrastructure</li>
+                            <li>Essential for AI deployment in regulated industries</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Technical Value</h3>
+                        <ul class="benefit-list">
+                            <li>Short, memorable, and descriptive</li>
+                            <li>Easy to spell and pronounce</li>
+                            <li>Directly relates to core ML/AI principles</li>
+                            <li>Suitable for global audience without language barriers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pricing">
+                <h3>Premium Domain Value</h3>
+                <p>Reproducible.com represents a strategic acquisition in the rapidly growing fields of AI/ML, MLOps, and scientific computing.</p>
+                <div class="inquire-box">
+                    <h3>Contact us for pricing information</h3>
+                    <p>Similar technical/scientific domains with strong industry relevance have sold for significant sums, with strategic domains often reaching six figures.</p>
+                    <a href="#contact" class="btn">Request Information</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-    &copy; 2025 <a href="https://reproducible.com">Reproducible.com</a>. All rights reserved.
-</footer>
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Secure This Premium Domain</h2>
+            <div class="section-intro">
+                <p>Contact us today to inquire about acquiring Reproducible.com for your organization.</p>
+            </div>
+            
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" placeholder="Your company">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Tell us about your interest in reproducible.com"></textarea>
+                </div>
+                <button class="btn">Submit Inquiry</button>
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Reproducible.com - All Rights Reserved</p>
+            <p>This domain is currently available for acquisition</p>
+        </div>
+    </footer>
 </body>
 </html>
