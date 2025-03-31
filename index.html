@@ -588,28 +588,28 @@
     <script>
         const form = document.getElementById("myForm");
         form.addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent the default form submission
-    
+            event.preventDefault();
+
             const formData = new FormData(form);
             const data = {};
             formData.forEach((value, key) => {
                 data[key] = value;
             });
+            
+            data.domain = window.location.hostname;
 
-            data.domain = "reproducible.com";
-    
-            const scriptURL = "https://script.google.com/macros/s/AKfycbxZFKqVS2F60xKJ-0lmEKGjzysaGFfGMI_6hXfI5Vz8XFVysP6LrMjo6HLploC3_vW4/exec";
-    
+            const scriptURL = https://script.google.com/macros/s/AKfycbxZFKqVS2F60xKJ-0lmEKGjzysaGFfGMI_6hXfI5Vz8XFVysP6LrMjo6HLploC3_vW4/exec";
+
             const xhr = new XMLHttpRequest();
             xhr.open("POST", scriptURL);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); //  Ensure correct content type
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onload = function() {
                 if (xhr.status === 200) {
-                    alert("Thank you for your inquiry! We will get back to you shortly."); // Improved user feedback
-                    form.reset(); // Clear the form fields
+                    alert("Thank you for your inquiry! We will get back to you shortly.");
+                    form.reset();
                 } else {
-                    alert("Sorry, there was an error submitting your inquiry. Please try again."); // More user-friendly error
-                    console.error("Error submitting form:", xhr.responseText); // Log the error for debugging
+                    alert("Sorry, there was an error submitting your inquiry. Please try again.");
+                    console.error("Error submitting form:", xhr.responseText);
                 }
             };
             const urlEncodedData = new URLSearchParams(data).toString();
