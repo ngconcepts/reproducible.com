@@ -586,28 +586,41 @@
     </section>
     <script>
         const form = document.getElementById("myForm");
+        const formContainer = document.querySelector(".contact-form");
+    
         form.addEventListener("submit", function(event) {
             event.preventDefault();
-
+    
             const formData = new FormData(form);
             const data = {};
             formData.forEach((value, key) => {
                 data[key] = value;
             });
-
-            data.domain = "reproducible.com"; //  Replace with your actual domain
-
+    
+            data.domain = "reproducible.com";
             const scriptURL = "https://script.google.com/macros/s/AKfycbylGHcRi1LTCGMZ2_NqSeEwnZQjgtR3bIeCeSCFn3RGIBi8ajCE71VcmvSQ03Wvaye-/exec";
-
             const xhr = new XMLHttpRequest();
             xhr.open("POST", scriptURL);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
             xhr.onload = function() {
                 if (xhr.status === 200) {
-                    alert("Thank you for your inquiry! We will get back to you shortly.");
-                    form.reset();
+                    // Clear the form and show success message
+                    formContainer.innerHTML = `
+                        <div class="success-message" style="text-align: center; color: var(--secondary);">
+                            <h3 style="margin-bottom: 1rem;">Thank You!</h3>
+                            <p style="margin-bottom: 1.5rem;">Your inquiry has been successfully submitted. We'll get back to you soon.</p>
+                            <button onclick="location.reload()" class="btn">Submit Another Inquiry</button>
+                        </div>
+                    `;
                 } else {
-                    alert("Sorry, there was an error submitting your inquiry. Please try again.");
+                    // Show error message but keep it within the form container
+                    formContainer.innerHTML = `
+                        <div class="error-message" style="text-align: center; color: var(--secondary);">
+                            <h3 style="margin-bottom: 1rem;">Oops!</h3>
+                            <p style="margin-bottom: 1.5rem;">There was an error submitting your inquiry. Please try again.</p>
+                            <button onclick="location.reload()" class="btn">Try Again</button>
+                        </div>
+                    `;
                     console.error("Error submitting form:", xhr.responseText);
                 }
             };
