@@ -584,7 +584,6 @@
             </div>
         </div>
     </section>
-
     <script>
         const form = document.getElementById("myForm");
         form.addEventListener("submit", function(event) {
@@ -595,10 +594,10 @@
             formData.forEach((value, key) => {
                 data[key] = value;
             });
-            
-            data.domain = window.location.hostname;
 
-            const scriptURL = https://script.google.com/macros/s/AKfycbxZFKqVS2F60xKJ-0lmEKGjzysaGFfGMI_6hXfI5Vz8XFVysP6LrMjo6HLploC3_vW4/exec";
+            data.domain = "your_hardcoded_domain.com"; //  Replace with your actual domain
+
+            const scriptURL = "https://script.google.com/macros/s/AKfycbxZFKqVS2F60xKJ-0lmEKGjzysaGFfGMI_6hXfI5Vz8XFVysP6LrMjo6HLploC3_vW4/exec";
 
             const xhr = new XMLHttpRequest();
             xhr.open("POST", scriptURL);
