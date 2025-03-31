@@ -584,50 +584,7 @@
             </div>
         </div>
     </section>
-    <script>
-        const form = document.getElementById("myForm");
-        const formContainer = document.querySelector(".contact-form");
-    
-        form.addEventListener("submit", function(event) {
-            event.preventDefault();
-    
-            const formData = new FormData(form);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-    
-            data.domain = "reproducible.com";
-            const scriptURL = "https://script.google.com/macros/s/AKfycbylGHcRi1LTCGMZ2_NqSeEwnZQjgtR3bIeCeSCFn3RGIBi8ajCE71VcmvSQ03Wvaye-/exec";
-            const xhr = new XMLHttpRequest();
-            xhr.open("POST", scriptURL);
-            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    // Clear the form and show success message
-                    formContainer.innerHTML = `
-                        <div class="success-message" style="text-align: center; color: var(--secondary);">
-                            <h3 style="margin-bottom: 1rem;">Thank You!</h3>
-                            <p style="margin-bottom: 1.5rem;">Your inquiry has been successfully submitted. We'll get back to you soon.</p>
-                            <button onclick="location.reload()" class="btn">Submit Another Inquiry</button>
-                        </div>
-                    `;
-                } else {
-                    // Show error message but keep it within the form container
-                    formContainer.innerHTML = `
-                        <div class="error-message" style="text-align: center; color: var(--secondary);">
-                            <h3 style="margin-bottom: 1rem;">Oops!</h3>
-                            <p style="margin-bottom: 1.5rem;">There was an error submitting your inquiry. Please try again.</p>
-                            <button onclick="location.reload()" class="btn">Try Again</button>
-                        </div>
-                    `;
-                    console.error("Error submitting form:", xhr.responseText);
-                }
-            };
-            const urlEncodedData = new URLSearchParams(data).toString();
-            xhr.send(urlEncodedData);
-        });
-    </script>
+    <script>function _0x55cf(){const _0x14fd3d=['3943570zpjbIW','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22success-message\x22\x20style=\x22text-align:\x20center;\x20color:\x20var(--secondary);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22margin-bottom:\x201rem;\x22>Thank\x20You!</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin-bottom:\x201.5rem;\x22>Your\x20inquiry\x20has\x20been\x20successfully\x20submitted.\x20We\x27ll\x20get\x20back\x20to\x20you\x20soon.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22location.reload()\x22\x20class=\x22btn\x22>Submit\x20Another\x20Inquiry</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','2175164ItFbdR','.contact-form','getElementById','toString','querySelector','147bWDkQy','3ArnMnf','3381816qcZXYb','forEach','innerHTML','Error\x20submitting\x20form:','POST','https://script.google.com/macros/s/AKfycbylGHcRi1LTCGMZ2_NqSeEwnZQjgtR3bIeCeSCFn3RGIBi8ajCE71VcmvSQ03Wvaye-/exec','submit','reproducible.com','addEventListener','error','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22error-message\x22\x20style=\x22text-align:\x20center;\x20color:\x20var(--secondary);\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20style=\x22margin-bottom:\x201rem;\x22>Oops!</h3>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20style=\x22margin-bottom:\x201.5rem;\x22>There\x20was\x20an\x20error\x20submitting\x20your\x20inquiry.\x20Please\x20try\x20again.</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20onclick=\x22location.reload()\x22\x20class=\x22btn\x22>Try\x20Again</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','application/x-www-form-urlencoded','Content-Type','2240qwxwZQ','13941fUQTCh','796978tFmBZo','myForm','open','179896XjlfJE','381884gocSKt','send','preventDefault'];_0x55cf=function(){return _0x14fd3d;};return _0x55cf();}const _0x30af6f=_0x3cd4;(function(_0x5bf795,_0x5183a3){const _0x5ae0ae=_0x3cd4,_0x5e196=_0x5bf795();while(!![]){try{const _0x374272=-parseInt(_0x5ae0ae(0x163))/0x1+parseInt(_0x5ae0ae(0x14d))/0x2*(parseInt(_0x5ae0ae(0x153))/0x3)+-parseInt(_0x5ae0ae(0x148))/0x4+parseInt(_0x5ae0ae(0x14b))/0x5+-parseInt(_0x5ae0ae(0x154))/0x6+-parseInt(_0x5ae0ae(0x152))/0x7*(-parseInt(_0x5ae0ae(0x147))/0x8)+-parseInt(_0x5ae0ae(0x162))/0x9*(parseInt(_0x5ae0ae(0x161))/0xa);if(_0x374272===_0x5183a3)break;else _0x5e196['push'](_0x5e196['shift']());}catch(_0x477dde){_0x5e196['push'](_0x5e196['shift']());}}}(_0x55cf,0x852b6));function _0x3cd4(_0x103861,_0x5a47c0){const _0x55cf12=_0x55cf();return _0x3cd4=function(_0x3cd475,_0x33c20e){_0x3cd475=_0x3cd475-0x145;let _0x31cfd5=_0x55cf12[_0x3cd475];return _0x31cfd5;},_0x3cd4(_0x103861,_0x5a47c0);}const form=document[_0x30af6f(0x14f)](_0x30af6f(0x145)),formContainer=document[_0x30af6f(0x151)](_0x30af6f(0x14e));form[_0x30af6f(0x15c)](_0x30af6f(0x15a),function(_0x5555db){const _0x61e5fa=_0x30af6f;_0x5555db[_0x61e5fa(0x14a)]();const _0xf995ce=new FormData(form),_0x4fd5da={};_0xf995ce[_0x61e5fa(0x155)]((_0x38f2fd,_0x10c43a)=>{_0x4fd5da[_0x10c43a]=_0x38f2fd;}),_0x4fd5da['domain']=_0x61e5fa(0x15b);const _0x36c9ef=_0x61e5fa(0x159),_0x561204=new XMLHttpRequest();_0x561204[_0x61e5fa(0x146)](_0x61e5fa(0x158),_0x36c9ef),_0x561204['setRequestHeader'](_0x61e5fa(0x160),_0x61e5fa(0x15f)),_0x561204['onload']=function(){const _0x264bbd=_0x61e5fa;_0x561204['status']===0xc8?formContainer[_0x264bbd(0x156)]=_0x264bbd(0x14c):(formContainer['innerHTML']=_0x264bbd(0x15e),console[_0x264bbd(0x15d)](_0x264bbd(0x157),_0x561204['responseText']));};const _0xcfa6e5=new URLSearchParams(_0x4fd5da)[_0x61e5fa(0x150)]();_0x561204[_0x61e5fa(0x149)](_0xcfa6e5);});</script>
     
     <footer>
         <div class="container">
